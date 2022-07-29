@@ -1,0 +1,101 @@
+Date-Format: "EEE, MMM dd, yyyy"
+
+Jobs:
+  #This name will be used in the command
+  EventPlanner: # Example: /hire Koalition EventPlanner
+    permission: 'businesscraft.hire.dopa'
+    hard-soft-fireable: false
+    hire-command: 'lp user $player parent add communitycoordinator'
+    fire-command: 'lp user $player parent remove communitycoordinator'
+    error-message: '&cOnly the &3&lMinister of Public Affairs &ccan run this command.'
+    minister-hire-broadcast: 'Player $player has been hired in to The Department of Public Affairs by $sender.'
+    minister-fire-broadcast: 'Player $player has been fired from The Department of Public Affairs by $sender.'
+    hire-mail:
+      send: true
+      message: 'You have been hired into the DoPA as an Event Planner on $date by $sender!'
+    fire-mail:
+      send: true
+      message: 'You have been fired from the DoPA on $date by $sender!'
+      
+  HeadEventPlanner: # Example: /fire Koalition HeadEventPlanner
+    permission: 'businesscraft.hire.dopa'
+    hard-soft-fireable: false
+    hire-command: 'lp user $player parent add seniorcommunitycoordinator'
+    fire-command: 'lp user $player parent remove seniorcommunitycoordinator'
+    error-message: '&cOnly the &3&lMinister of Public Affairs &ccan run this command.'
+    minister-hire-broadcast: 'Player $player has been hired in to The Department of Public Affairs by $sender.'
+    minister-fire-broadcast: 'Player $player has been fired from The Department of Public Affairs by $sender.'
+    hire-mail:
+      send: true
+      message: 'You have been hired into the DoPA as a Head Event Planner on $date by $sender!'
+    fire-mail:
+      send: true
+      message: 'You have been fired from the DoPA on $date by $sender!'
+    
+  EnvironmentManager:
+    permission: 'businesscraft.hire.doa'
+    hard-soft-fireable: false
+    hire-command: 'lp user $player parent add environmentmanager'
+    fire-command: 'lp user $player parent remove environmentmanager'
+    error-message: '&cOnly the &3&lMinister of Agriculture &ccan run this command.'
+    minister-hire-broadcast: 'Player $player has been hired in to The Department of Agriculture by $sender.'
+    minister-fire-broadcast: 'Player $player has been fired from The Department of Agriculture by $sender.'
+    hire-mail:
+      send: true
+      message: 'You have been hired into the DoA as an Environment Manager on $date by $sender!'
+    fire-mail:
+      send: true
+      message: 'You have been fired from the DoA on $date by $sender!'
+    
+  PoliceOfficer:
+    permission: 'businesscraft.hire.doj'
+    hard-soft-fireable: false
+    hire-command: 'lp user $player parent add police'
+    fire-command: 'lp user $player parent remove police'
+    error-message: '&cOnly the &3&lMinister of Justice &ccan run this command.'
+    minister-hire-broadcast: 'Player $player has been hired in to The Department of Justice by $sender.'
+    minister-fire-broadcast: 'Player $player has been fired from The Department of Justice by $sender.'
+    hire-mail:
+      send: true
+      message: 'You have been hired into the DoJ as a Police Officer on $date by $sender!'
+    fire-mail:
+      send: true
+      message: 'You have been fired from the DoJ on $date by $sender!'
+      
+  Doctor:
+    permission: 'businesscraft.hire.doh'
+    hard-soft-fireable: true
+    hire-command: 'lp user $player parent add doctor'
+    fire-command: 'lp user $player parent remove doctor'
+    hard-fire-command: 'lp user $player permission set exam.Doctor false'
+    rehire-command: 'lp user $player permission unset exam.Doctor'
+    error-message: '&cOnly the &3&lMinister of Public Affairs &ccan run this command.'
+    rehire-message: '$player can become a Doctor again.'
+    minister-hire-broadcast: 'Player $player has been hired in to The Department of Health (Doctor) by $sender.'
+    minister-fire-broadcast: 'Player $player has been fired from The Department of Health (Doctor) by $sender.'
+    hire-mail:
+      send: true
+      message: 'You have been hired into the DoH as a Doctor on $date by $sender!'
+    fire-mail:
+      send: true
+      message: 'You have been fired from the DoH on $date by $sender!'
+      
+  TourGuide:
+    permission: 'businesscraft.hire.dopa'
+    hard-soft-fireable: true
+    hire-command: 'lp user $player parent add tourguide'
+    fire-command: 'lp user $player parent remove tourguide'
+    hard-fire-command: 'lp user $player permission set exam.TourGuide false'
+    rehire-command: 'lp user $player permission unset exam.TourGuide'
+    error-message: '&cOnly the &3&lMinister of Public Affairs &ccan run this command.'
+    rehire-message: '$player can become a Tour Guide again.'
+    minister-hire-broadcast: 'Player $player has been hired in to The Department of Public Affairs (TourGuide) by $sender.'
+    minister-fire-broadcast: 'Player $player has been fired from The Department of Public Affairs (TourGuide) by $sender.'
+    hire-mail:
+      send: true
+      message: 'You have been hired into the DoPA as a Tour Guide on $date by $sender!'
+    fire-mail:
+      send: true
+      message: 'You have been fired from the DoPA on $date by $sender!'
+      
+Help-header: "    &8&l/$cmd <player> &f..."

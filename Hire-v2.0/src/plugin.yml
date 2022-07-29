@@ -1,0 +1,11 @@
+main: me.hybridplague.hire.Hire
+name: Hire
+version: 2.0
+author: HybridPlague
+api-version: 1.13
+
+commands:
+  Hire:
+  Fire:
+  Rehire:
+  FireList:
